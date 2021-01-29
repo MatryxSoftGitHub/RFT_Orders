@@ -1,0 +1,44 @@
+package TestScripts.EditOrders;
+import resources.TestScripts.EditOrders.EditOrderHelper;
+import com.rational.test.ft.*;
+import com.rational.test.ft.object.interfaces.*;
+import com.rational.test.ft.object.interfaces.SAP.*;
+import com.rational.test.ft.object.interfaces.WPF.*;
+import com.rational.test.ft.object.interfaces.dojo.*;
+import com.rational.test.ft.object.interfaces.siebel.*;
+import com.rational.test.ft.object.interfaces.flex.*;
+import com.rational.test.ft.object.interfaces.generichtmlsubdomain.*;
+import com.rational.test.ft.script.*;
+import com.rational.test.ft.value.*;
+import com.rational.test.ft.vp.*;
+import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
+/**
+ * Description   : Functional Test Script
+ * @author msadmin
+ */
+public class EditOrder extends EditOrderHelper
+{
+	/**
+	 * Script Name   : <b>EditOrder</b>
+	 * Generated     : <b>18-Jan-2021 2:40:31 pm</b>
+	 * Description   : Functional Test Script
+	 * Original Host : WinNT Version 10.0  Build 18363 ()
+	 * 
+	 * @since  2021/01/18
+	 * @author msadmin
+	 */
+	public void testMain(Object[] args) 
+	{
+		startApp("Orders");
+		
+		// Window: Orders.exe: Untitled - Orders
+		applicationmenuBar().click(atPath("File"));
+		applicationmenuBar().click(atPath("File->Open..."));
+		
+		// Window: Orders.exe: Open
+		openwindow().inputChars("PlacedOrders.tbl");
+		openbutton().click(atPoint(35,14));
+		
+	}
+}
+

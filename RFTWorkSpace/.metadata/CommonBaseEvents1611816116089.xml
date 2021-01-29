@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./CommonBaseEvents.xsl"?>
+<CommonBaseEvents>
+	<CommonBaseEvent creationTime="2021-01-25T05:54:55.819Z" msg="The following warnings have been detected: WARNING: Return type, com.hcl.test.serialization.util.IPresentedObject&lt;?&gt;, of method, public com.hcl.test.serialization.util.IPresentedObject&lt;?&gt; com.ibm.rational.test.lt.server.analytics.util.TreeResource.getMembers(), is not resolvable to a concrete type.&#xA;" severity="50" version="1.0.1">
+		<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+			<values>0</values>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+			<values>64</values>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+			<children name="CommonBaseEventLogRecord:name" type="string">
+				<values>WARNING</values>
+			</children>
+			<children name="CommonBaseEventLogRecord:value" type="int">
+				<values>900</values>
+			</children>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+			<values>org.glassfish.jersey.internal.Errors</values>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:sourceClassName" type="string">
+			<values>org.glassfish.jersey.internal.Errors</values>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:sourceMethodName" type="string">
+			<values>logErrors</values>
+		</extendedDataElements>
+		<sourceComponentId component="Logging" componentIdType="Application" executionEnvironment="Java" location="10.10.20.134" locationType="IPV4" subComponent="Logger" componentType="Logging_Application"/>
+		<situation categoryName="ReportSituation">
+			<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+		</situation>
+	</CommonBaseEvent>
+	<CommonBaseEvent creationTime="2021-01-25T05:54:56.130Z" msg="The following warnings have been detected: WARNING: Return type, com.hcl.test.serialization.util.IPresentedObject&lt;?&gt;, of method, public com.hcl.test.serialization.util.IPresentedObject&lt;?&gt; com.ibm.rational.test.lt.server.analytics.util.TreeResource.getMembers(), is not resolvable to a concrete type.&#xA;WARNING: Return type, com.hcl.test.serialization.util.IPresentedObject&lt;?&gt;, of method, public com.hcl.test.serialization.util.IPresentedObject&lt;?&gt; com.ibm.rational.test.lt.server.analytics.util.TreeResource.getMembers(), is not resolvable to a concrete type.&#xA;" severity="50" version="1.0.1">
+		<extendedDataElements name="CommonBaseEventLogRecord:sequenceNumber" type="long">
+			<values>1</values>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:threadID" type="int">
+			<values>64</values>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:level" type="noValue">
+			<children name="CommonBaseEventLogRecord:name" type="string">
+				<values>WARNING</values>
+			</children>
+			<children name="CommonBaseEventLogRecord:value" type="int">
+				<values>900</values>
+			</children>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:loggerName" type="string">
+			<values>org.glassfish.jersey.internal.Errors</values>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:sourceClassName" type="string">
+			<values>org.glassfish.jersey.internal.Errors</values>
+		</extendedDataElements>
+		<extendedDataElements name="CommonBaseEventLogRecord:sourceMethodName" type="string">
+			<values>logErrors</values>
+		</extendedDataElements>
+		<sourceComponentId component="Logging" componentIdType="Application" executionEnvironment="Java" location="10.10.20.134" locationType="IPV4" subComponent="Logger" componentType="Logging_Application"/>
+		<situation categoryName="ReportSituation">
+			<situationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReportSituation" reasoningScope="INTERNAL" reportCategory="LOG"/>
+		</situation>
+	</CommonBaseEvent>
+</CommonBaseEvents>

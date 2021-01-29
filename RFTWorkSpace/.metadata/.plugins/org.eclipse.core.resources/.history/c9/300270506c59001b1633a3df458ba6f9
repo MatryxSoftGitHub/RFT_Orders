@@ -1,0 +1,43 @@
+package TestScripts.EditOrders;
+import resources.TestScripts.EditOrders.Step_EditOrderHelper;
+import com.rational.test.ft.*;
+import com.rational.test.ft.object.interfaces.*;
+import com.rational.test.ft.object.interfaces.SAP.*;
+import com.rational.test.ft.object.interfaces.WPF.*;
+import com.rational.test.ft.object.interfaces.dojo.*;
+import com.rational.test.ft.object.interfaces.siebel.*;
+import com.rational.test.ft.object.interfaces.flex.*;
+import com.rational.test.ft.object.interfaces.generichtmlsubdomain.*;
+import com.rational.test.ft.script.*;
+import com.rational.test.ft.value.*;
+import com.rational.test.ft.vp.*;
+import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
+
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;  
+/**
+ * Description   : Functional Test Script
+ * @author msadmin
+ */
+public class Step_EditOrder extends Step_EditOrderHelper
+{
+	/**
+	 * Script Name   : <b>Step_EditOrder</b>
+	 * Generated     : <b>18-Jan-2021 11:34:19 am</b>
+	 * Description   : Functional Test Script
+	 * Original Host : WinNT Version 10.0  Build 18363 ()
+	 * 
+	 * @since  2021/01/18
+	 * @author msadmin
+	 */
+	public void testMain(Object[] args) throws InterruptedException
+	{
+		startApp("Orders");
+		
+		
+		// Window: Orders.exe: Untitled - Orders
+		callScript("TestScripts.SingleOrder.Step_SingleOrder");
+
+	}
+}
+

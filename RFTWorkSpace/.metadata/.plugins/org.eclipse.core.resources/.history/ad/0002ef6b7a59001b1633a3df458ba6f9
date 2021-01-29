@@ -1,0 +1,126 @@
+package TestScripts.EditOrders;
+import resources.TestScripts.EditOrders.EditOrderHelper;
+import com.rational.test.ft.*;
+import com.rational.test.ft.object.interfaces.*;
+import com.rational.test.ft.object.interfaces.SAP.*;
+import com.rational.test.ft.object.interfaces.WPF.*;
+import com.rational.test.ft.object.interfaces.dojo.*;
+import com.rational.test.ft.object.interfaces.siebel.*;
+import com.rational.test.ft.object.interfaces.flex.*;
+import com.rational.test.ft.object.interfaces.generichtmlsubdomain.*;
+import com.rational.test.ft.script.*;
+import com.rational.test.ft.value.*;
+import com.rational.test.ft.vp.*;
+import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
+
+import java.lang.Object;
+
+/**
+ * Description   : Functional Test Script
+ * @author msadmin
+ */
+public class EditOrder extends EditOrderHelper
+{
+	/**
+	 * Script Name   : <b>EditOrder</b>
+	 * Generated     : <b>18-Jan-2021 2:47:05 pm</b>
+	 * Description   : Functional Test Script
+	 * Original Host : WinNT Version 10.0  Build 18363 ()
+	 * 
+	 * @since  2021/01/18
+	 * @author msadmin
+	 */
+	public void testMain(Object[] args) 
+	{
+		startApp("Orders");
+		
+		// Window: Orders.exe: Untitled - Orders
+		MenuBar().click(atPath("File"));
+		MenuBar().click(atPath("File->Open..."));
+		
+		// Window: Orders.exe: Open
+		openwindow().inputKeys("PlacedOrders.tbl");
+		Btn_Open().click();
+		
+		// Window: Orders.exe: PlacedOrders.tbl - Orders
+		//Lvw_ListViewTable().click(atCell(atRow(atText("MatryxSoft")), atColumn(atText("Product"))));
+		
+		//Get the data for the table
+		ITestDataTable orderTable = (ITestDataTable)Lvw_ListViewTable().getTestData("contents");
+
+		
+		System.out.println ("Total Rows in table : " + orderTable.getRowCount());
+		System.out.println ("Total Cols in table : " + orderTable.getColumnCount());
+		
+		
+		 // Cycle through all rows
+		  for (int row=0; row < orderTable.getRowCount();++row)
+		  {
+		      // Cycle through all columns
+		      for (int col=0; col < orderTable.getColumnCount();++col)
+		      {
+		          // Print out values of cells at (row,col) coordinates
+		        //  System.out.println ("Row " + row + ", " + orderTable.getColumnHeader(col) + ": " +orderTable.getCell(row,col) );
+					}
+		      
+			}
+		  
+		  //Individual Cell values
+		  
+		  for (int row=0; row < orderTable.getRowCount();++row)
+		  {
+		      // Cycle through all columns
+		      for (int col=0; col < orderTable.getColumnCount();++col)
+		      {
+		          // Print out values of cells at (row,col) coords
+		          System.out.println ("Row " + row + ", " +
+		          orderTable.getColumnHeader(col) + ": " +
+		          orderTable.getCell(1,1) );
+		      }
+		  }
+		  
+		
+//		System.out.println(Lvw_ListViewTable().getChildren());
+//		String s = getColumnValue(Lvw_ListViewTable(),1, 1);
+		
+//		System.out.println(s);
+		
+//		TestObject rows= ((Object) Lvw_ListViewTable()).getCell(1,1);
+		
+		
+		
+		
+	//	TestObject rows = (TestObject) Lvw_ListViewTable().invoke(getCell(1,1));
+		
+	//	System.out.println(rows);
+		
+//		Lvw_ListViewTable().getSelectedText();
+//		System.out.println(Lvw_ListViewTable().getSelectedText());
+		Lvw_ListViewTable().click(RIGHT, atCell(
+                                        atRow(atText("abc")), 
+                                        atColumn(atText("Product"))));
+		
+		Lvw_ListViewTable().getSelectedText().contentEquals("abc");
+		System.out.println(Lvw_ListViewTable().getSelectedText().contentEquals("abc"));
+		
+		// Window: Orders.exe: Context
+		PopUpMenu().click(atPath("Edit order..."));
+		
+		// Window: Orders.exe: Edit order
+		Txt_CustomerName().click();
+		Lvw_OrderTable().inputKeys(" LLP");
+		Btn_Ok().click();
+		
+		// Window: Orders.exe: PlacedOrders.tbl - Orders
+		Wnd_Order(ANY,MAY_EXIT).click(CLOSE_BUTTON);
+		
+		// Window: Orders.exe: Orders
+		Btn_Yes(ANY,MAY_EXIT).click(atPoint(23,8));
+	}
+
+	private String getColumnValue(SelectGuiSubitemTestObject lvw_ListViewTable, int i, int j) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+

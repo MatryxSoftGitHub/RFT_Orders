@@ -1,0 +1,4 @@
+com.rational.test.ft.wswplugin.datapool.substitution.add=true
+com.rational.test.ft.wswplugin.default.map.F\:\\Dileep\\RFTWorkSpace\\Orders=/ObjectRepo/SaveOrder_TestObjectMap.rftmap
+com.rational.test.ft.wswplugin.last.datastore.location=F\:\\Dileep\\RFTWorkSpace
+eclipse.preferences.version=1
